@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="300">
+    <title>Send Msg via WhatsApp</title>
+    <link rel="stylesheet" href="whatsapp.css">
+</head>
+<body>
+    <div id="caution"> 
+        Kindly note the following:
+        <br>
+        <ul>
+            <li>Do not Share your Name</li>
+            <li>Do not Share your Admission number</li>
+            <li>On submitting the shortcome, expect immediate call</li>
+        </ul>
+    </div>
+
+    <!--HOME PAGE button-->
+    <div class="body">
+        <!--WHATSAPP MESSAGE BUTTON-->
+        <button class="chat_whatsapp" onclick="document.getElementById('id01').style.display='block'" >Chat WhatsApp</button> 
+         <br>
+        <a class="backhome" href="Index.html">Back</a>
+
+        <div class="content">
+            <div id="id01" class="modal">
+
+                <!--The FORM FIELDS-->
+                <form class="modal-content animate" action="">
+                    
+                    <div class="imgcontainer"> <!--avatar image-->
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                        <img src="pcb.jpg" alt="pcb" class="pcb">
+                      </div>
+
+                      <!--header-->
+                      <h2 class="h2">WhatsApp Client Form</h2>
+
+                    <fieldset>  <!--contact-->
+                        <legend>Contacts:</legend>
+                        <div class="container">
+                                   <!-- phone number-->
+                            <input type="text" id="phone" placeholder="Enter Phone#" name="phone" required>
+                                <!--email address-->
+                            <input type="email" id="email" placeholder="Enter Email" name="email" required>
+                            
+                            <label for="contacts2">Reach me via:</label>
+                            <select name="contacts2" id="contact"  required>
+                                <option value="" disabled>Where to Meet</option>
+                                <option value=""></option>
+                                <option value="WhatsApp">WhatsApp</option>
+                                <option value="Email">Email Above</option>
+                                <option value="phone#">Phone Above</option>
+                                <option value="Physically">Physical Dialogue</option>
+                            </select> 
+                        </div>
+                   </fieldset>
+                   
+                   <fieldset>  <!--gender-->
+                    <legend>Gender:</legend>
+                    <div class="container" id="gender">
+                            <!-- Male--> 
+                        <input type="radio" name="Gender" value="M" required>
+                        <label for="M_gender">Male</label>
+                            <!--Female-->
+                        <label for="F_gender">Female</label> 
+                        <input type="radio"  name="Gender" value="F" required>
+                    </div>
+               </fieldset>
+
+               <fieldset>
+                <Legend>School Category:</Legend>
+                <select name="year" id="year">
+                    <option value="" disabled>Your Year of study</option>
+                    <option value="">Year of Study:</option>
+                    <option value="Year ONE">Year ONE</option>
+                    <option value="2">Year TWO</option>
+                    <option value="3">Year THREE</option>
+                    <option value="4">Year FOUR</option>
+                </select>
+
+                <select name="school_of" id="school" class="select" required>
+                    <option value="School of" disabled>School of</option>
+                    <option value="">School of:</option>
+                    <option value="1">Arts</option>
+                    <option value="2">Busines</option>
+                    <option value="3">Education</option>
+                    <option value="4">Science</option>
+                </select> 
+
+                <label for="program">Program:</label>
+                <input type="text" name="program" id="program" placeholder="specify" required>
+               </fieldset>
+               
+               <fieldset>
+                    <legend>Indicate your Problem:</legend>
+                    <textarea name="problem" id="problem" rows="10" ></textarea>
+               </fieldset>
+
+               <button type="reset" title="Are you sure to delete all Info?" class="reset">Clear Info</button>
+               <button type="submit" value="send" onclick="whatsapp()">Done</button>
+              </form>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        //SEND WHATSAPP
+        function whatsapp(){
+            var phone = document.getElementById('phone').value;
+            var email = document.getElementById('email').value;
+            var contact = document.getElementById('contact').value;
+            var gender = document.getElementById('gender').value;
+            var year = document.getElementById('year').value;
+            var school = document.getElementById('school').value;
+            var program = document.getElementById('program').value;
+            var problem = document.getElementById('problem').value;
+
+            var whatsappurl = "https://wa.me/+254746300782?text="
+            + "*Phone No.:* " + phone + "%0a"
+            + "*Email:* " + email + "%0a"
+            + "*Reach me via:* " + contact + "%0a"
+            + "*Gender:*"%20 + gender + "%0a"
+            + "*Year of Study:* " + year + "%0a"
+            + "*School of:* " + school + "%0a"
+            + "*Program:* " + program + "%0a"
+            + "*Problem:* " + problem + "%0a"
+            window.open(whatsappurl, '_blank').focus();
+        }
+    </script>
+
+</body>
+</html>

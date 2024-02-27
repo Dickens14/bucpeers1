@@ -1,0 +1,205 @@
+body{
+    background-color: green;
+    color: white;
+}
+
+marquee{
+	direction: left;
+	color: rgb(0, 0, 0);
+  font-weight: bold;
+	background-color: white;
+	width: 100%;
+	height: 100%;
+	margin-top: -1rem;
+  border-radius: 20px 20px 0 0;
+}
+
+header{
+  background-color: gold;
+  height: 25vh;
+  margin-top: -5px;
+}
+
+.buc_logo{
+  width: 20%;
+  height: 25vh;
+	float: right;
+	left: 0;
+	top: 0;
+}
+
+.pc_logo{
+  width: 20%;
+  height: 25vh;
+	float: left;
+	right: 0;
+	top: 0;
+}
+
+.title{
+  color: green;
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border-top: inherit;
+    position: absolute;
+}
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 0 0;
+    border-top: none;
+    margin-top: 3;
+    background-color: white;
+    color: rgb(33, 1, 1);
+}
+
+  /*MAIN CONTENT*/
+  .tabcontent h3{ /*CONTENT TITLE*/
+    text-align: center;
+    text-transform: uppercase;
+    color: green;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: auto;
+    font-weight: bold;
+  }
+
+  .tabcontent p {
+    padding: 0 5px 2px 20px;
+   }
+
+  /*All Counselors' images*/
+  .tabcontent img{
+  width: 35%;
+	height: 25%;
+	border: 3px, solid green;
+  }
+
+
+  .buc h1{
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: wavy;
+    text-decoration-line: overline;
+    text-decoration-color: green;
+  }
+
+  footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: gold;
+}
+
+footer span a{
+  color: blue;
+  float: right;
+  text-decoration: none;
+}
+
+footer span a:hover{
+  background-color: green;
+  color: white;
+  border: 1px solid gold;
+}
+
+ /*GO TO TOP BUTTON*/
+#topBtn{
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  z-index: 99;
+  right: 10px;
+  border-radius: 50%;
+  border: 2px solid brown;
+  background-color: cyan;
+  color: black;
+  cursor: pointer;
+  width: 7%;
+  height: 6%;
+  font-size: 120%;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+}
+
+#topBtn:hover{
+  background-color: gold;
+  color: cyan;
+}
+
+/*++++++sliding+ images, up down+++++++*/
+.animate-top{
+  position: relative;
+  animation: animatetop 0.4s
+}
+@keyframes animatetop{
+  from{
+    top: -300px; 
+    opacity: 0
+  } 
+
+  to{
+    top: 0;
+    opacity: 1
+  }
+}
+
+.animate-left{
+position: relative;
+animation: animateleft 0.4s
+}
+
+@keyframes animateleft{
+from{
+  left: -300px;
+  opacity: 0} 
+to{
+  left: 0;
+  opacity: 1
+}
+}
+.animate-right{
+position: relative;
+animation: animateright 0.4s
+}
+
+@keyframes animateright{
+  from{right: -300px;
+    opacity: 0
+  } 
+  to{right: 0;
+    opacity: 1
+  }
+}
+
+.animate-bottom{
+position: relative;
+animation: animatebottom 0.4s
+}
+
+@keyframes animatebottom{
+from{
+  bottom: -300px;
+  opacity: 0
+} 
+to{bottom: 0;
+  opacity: 1
+}
+}
+.animate-zoom {
+animation: animatezoom 0.6s
+}
+
+@keyframes animatezoom{
+from{
+  transform: scale(0)
+} 
+to{
+  transform: scale(1)
+}
+}

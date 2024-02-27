@@ -1,0 +1,311 @@
+/*for lardge devices **/
+/*---------------------------------------*/
+@media (min-width: 1008px) {
+
+    body{
+        position: relative;
+    }
+
+	marquee{
+		font-size: 130% ;
+        height: 10vh;
+	}
+
+    header{
+        height: 20vh;
+        margin-top: -5px;
+    }
+
+    header nav span{
+        display: none;
+    }
+
+    .buc_logo, .pc_logo{
+        width: 12%;
+        height: 20vh;
+        border-radius: 50%;
+    }
+
+    .title{
+      text-align: center;
+      }
+
+    .title b{
+        font-size: 150%;
+    }
+
+    .title i{
+        font-size: 120%;
+    }
+
+    .buc{
+        position: relative;
+        width: 80%;
+        float: right;
+    }
+
+    .tab{
+        position: absolute;
+        background-color: gold;
+        border-right: 3px solid green;
+        float: left;
+        bottom: -141.7px;
+        width: 11%;
+        height: 100%;
+    }
+
+    .tabcontent h3{ /*CONTENT TITLE*/
+      border-bottom: 4px solid gold;
+      width: max-content;
+      border-radius: 10%;
+    }
+
+    button{
+        background-color: white;
+        font-size: 110%;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow';
+        float: left;
+        clear:  left;
+        color: rgb(55, 47, 1);
+        font-weight: bold;
+        border-radius: 15px;
+        width: 11%;
+        position: fixed;
+    }
+
+    button:hover{
+        color: gold;
+        font-weight: bold;
+        background-color: green;
+    }
+
+    button.active{
+      display: none;
+    }
+
+    #topBtn{
+        height: 8%;
+        width: 4%;
+        bottom: 35px;
+        right: 20px;
+    }
+
+     /* Add Zoom Animation */
+  .tablinks {
+    -webkit-animation: move 0.9s;
+    animation: move 0.9s
+  }
+  
+  @-webkit-keyframes move {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes move {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+
+    .about{
+        margin-top: 130px;
+    }
+
+    .peer{
+        margin-top: 180px;
+    }
+
+    .seniortab{
+        margin-top: 230px;
+    }
+
+    .recognition{
+        margin-top: 280px;
+    }
+
+  .tabcontent {  /* Style the tab content */
+      display: none;
+      width: 88%;
+      float: right;
+      border: 3px solid green;
+      border-left: 8px solid green;
+      font-size: 120%;
+      padding: -3px;
+   }
+
+     /*MAIN CONTENT*/
+   /*THE COUNSELLORS' PICTURES AND CONTACTS*/
+   .senior div{
+    width: 45%;
+    float: left;
+    padding: 0 5px 0 10px;
+    margin: 10px;
+    background-color: cyan;
+    border-radius: 10px;
+    border: 3px solid white;
+    box-shadow: 0 5px  green;
+   }
+
+  
+   aside{ /*FOR HEAD COUNSELLOR*/
+    width: 65%;
+    background-color: rgb(83, 181, 83);
+    margin: auto;
+    border: 4px solid rgb(211, 180, 3);
+    border-radius: 10% 10% 0 0;
+    box-shadow: 0 5px  green;
+   }
+
+   .asideimg{
+    height: 20%;
+    /* border-radius: 15% 15% 10px 15%;
+    box-shadow: 0 5px  green;
+    width: 30%; */
+   }
+
+   .aboutlec{
+    border-left: 2px solid green;
+    margin-left: 21%;
+    margin-top: -110px;
+   }
+
+   aside p{
+    margin-left: 35%;
+    margin-top: -360px;
+    font-weight: bold;
+    font-family: cursive;
+    color: gold;
+   }
+
+   aside p span{
+    font-weight: bold;
+    font-size: 250%;
+    font-family: lucida grande;
+   }
+
+   .reachcall1,
+   .reachemail1{
+    background-color: aqua;
+    text-decoration: none;
+    color: green;
+    border: 1px solid green;
+    border-radius: 10px;
+    padding: 2px 5px 0 5px;
+    text-transform: capitalize;
+    margin-left: 15px;
+    margin-bottom: -95px;
+   }
+
+   aside b b{
+    font-weight: bold;
+    margin: 15px;
+   }
+
+   .reachcall,
+   .reachemail{
+    float: right;
+    text-decoration: none;
+    color: green;
+    border: 1px solid green;
+    border-radius: 10px;
+    padding: 2px 5px 0 5px;
+    text-transform: capitalize;
+   }
+
+   .reachemail{
+    float: left;
+   }
+
+   .reachcall:hover,
+   .reachemail:hover,
+   .reachcall1:hover,
+   .reachemail1:hover{
+    background-color: green;
+    color: gold;
+   }
+
+
+   .senior div img{
+    width: 20%;
+    height: 30%;
+    border-radius: 5px;
+   }
+
+   .peers div { /*peer block*/
+    width: 29%;
+    float: left;
+    padding: 0 5px 0 10px;
+    margin: 10px;
+    background-color: gainsboro;
+    border-radius: 10px;
+    border: 3px solid rgb(245, 245, 244);
+    box-shadow: 1px 5px black;
+   }
+
+   .peers div:hover{/*on hover the peer block*/
+    border: 3px solid rgb(255, 217, 0);
+    background-color: cyan;
+    font-weight: bold;
+   }
+
+   .peers div span{ /*peer name and contacts*/
+    float: right;
+    margin-top: -2px;
+    text-align: center;
+   }
+
+   
+   .peers div img{
+    margin-left: -9px;
+    border-radius: 10px;
+   }
+
+   .peers span span{
+    margin-top: 1px;
+    float: right;
+    margin-right: 20px;
+   }
+
+   div span a{
+    color: green;
+    bottom: 0;
+    float: right;
+    float: left;
+    margin-left: 35px;
+    margin-right: 2px;
+    text-decoration: none;
+   }
+
+   .call{
+    display: none;
+  }
+
+   .whatsapp:hover, 
+   .call:hover{
+    background-color: green;
+    color: white;
+    border: 0.01px solid rgb(211, 180, 3);
+    font-weight: bold;
+    box-shadow: 1px 1px rgb(255, 183, 0);
+    margin-top: -5px;
+   }
+
+    .openbtn,
+    .closebtn {
+      display: none;
+    }
+    /*--SLIDE SHOW-==FOR LAGRGE SCREEN--*/
+
+  .mySlides{
+    display: none;
+    width: 90%;
+    height: 250px;
+    margin: 0 20% 0 80%;
+    box-shadow: rgba(50, 50, 93, .25) 0px 50px 100px -20px, rgba(0, 0, 0, .3) 0px 30px 60px -30px;
+ }
+
+  .img-content{
+    max-width: 500px;
+    object-fit: contain;
+  }
+
+}

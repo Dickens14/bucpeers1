@@ -1,0 +1,239 @@
+
+/**WHATSAPP FORM **/
+/*+++++++++++++++++++++++++++++++++++*/
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    
+}  
+
+body {
+  background-color: rgb(206, 206, 111);
+  font-family: Arial, Helvetica, sans-serif;
+	align-items: center;
+	justify-content: center;
+}
+
+  form{ /*form borders*/
+    border-radius: 10px 10px 5px 5px;
+  }
+
+  legend{/* field primary labels*/
+    color: gold;
+    text-decoration-line: underline;
+    text-decoration-color: green;
+    font-weight: bold;
+  }
+
+  fieldset{
+    border-top: 15px solid rgba(2, 141, 2, 0.266);
+    color: rgb(23, 171, 23);
+    border-radius: 13px 13px 0 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px dashed ;
+    
+  }
+  input fields
+  input, select, textarea{
+    border: 1px solid #51f704;
+  }
+  input[name=phone] {
+    width: 30%;
+    padding: 8px;
+    margin-top: -4px;
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 10px 0 0 10px;
+  }
+  
+ input[name=email] {
+    width: 67%;
+    padding: 8px;
+    margin-top: -4px;
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 0 10px 10px 0;
+ }
+
+  select[name=contacts2] {
+    float: right;
+    width: 67%;
+    padding: 8px;
+    margin-top: 4px;
+    border-radius: 0 10px 10px 0;
+  }
+  
+  /*gender field positioning*/
+label[for=F_gender]{
+    margin-right: 30%;
+    float: right;
+}
+input[value=F] {
+    float: right;
+}
+input[value=M] {
+    margin-left: 30%;
+    float: left;
+}
+
+  
+  /* Center the image and position the close button */
+  .imgcontainer {
+    text-align: center;
+    margin: 12px 0 12px 0;
+    position: relative;
+  } 
+
+  img.pcb { /*top image: PC logo*/
+    width: 30%;
+    border-radius: 50%;
+  }
+  
+  h2{ /*Form title whatsApp*/
+    text-align: center;
+    color: green;
+  }
+
+  select[name=year] {
+    width: 30%;
+    padding: 8px;
+    border-radius: 10px 0 0 10px;
+  }
+ 
+  select[name=school_of]{
+    width: 67%;
+    float: right;
+    padding: 8px;
+    border-radius: 0 10px 10px 0;
+  }
+
+  input[name=program]{
+    width: 61%;
+    float: right;
+    padding: 8px;
+    border-radius: 0 10px 10px 0;
+    margin-top: 4px;
+  }
+  textarea{
+    width: 100%;
+  }
+  
+
+  /* The Modal (background) */
+  /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: green; /* Black w/ opacity */
+  padding-top: 60px;
+}
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid gold;
+    border-radius: 10px;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button (x) */
+    .close {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    color: gold;
+    font-size: 45px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: green;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.9s;
+    animation: animatezoom 0.9s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  button[type=submit] {
+    width: 100%;
+    background-color: #51f704;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 6px;
+  }
+
+
+  .chat_whatsapp{
+    padding: 10px;
+    border-radius: 10px;
+    color: gold;
+    height: 60px;
+    background-color: green;
+    margin: 10px 20% 20px 35%;
+  }
+
+  .backhome{
+    color: rgb(241, 99, 99);
+    text-decoration: none;
+    margin: 10px 20% 20px 45%;
+  }
+
+  button[type=submit]:hover,
+  button[type=submit]:focus {
+  color: green;
+  font-size: 130%;
+  font-weight: bold;
+  box-shadow: 0px 0px 2px 4px rgba(10, 240, 48, 0.716);
+}
+
+  .chat_whatsapp:hover,
+  .chat_whatsapp:focus{
+    color: rgb(1, 254, 1);
+    font-size: 130%;
+    font-weight: bold;
+    box-shadow: 0px 0px 20px 15px white;
+  }
+
+
+  #caution{
+    margin: 10px 20% 20px 15%;
+  }
+  .reset{
+    width: max-content;
+    border-radius: 10px;
+    padding: 8px;
+    cursor: progress;
+    border: none;
+    background-color: inherit;
+    margin-top: 3px;
+  }
+
+.reset:hover,
+.reset:focus,
+.backhome:hover {
+  color: blue;
+  background-color: wheat;
+}
+

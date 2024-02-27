@@ -1,0 +1,180 @@
+
+    *{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(206, 206, 111);
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.send{
+    padding: 10px;
+    border-radius: 10px;
+    color: gold;
+    height: 60px;
+    background-color: green;
+}
+
+a{
+    color: red;
+    text-decoration: none;
+    padding-top: 40%;
+    text-align: center;
+}
+
+/* Full-width input fields */
+input, textarea {
+  width: 100%;
+  padding: 5px 3px;
+  margin: 8px 0;
+  display: inline-block;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  box-sizing: border-box;
+}
+
+
+ 
+legend{
+    border-bottom: 2px solid grey;
+}
+
+label{
+    color: green;
+}
+
+select{
+    float: right;
+    width: 60%;
+    border: none;
+}
+
+/* Set a style for all buttons */
+button[type=submit] {
+  float: right;
+  background-color: green;
+  color: gold;
+  padding: 14px 2px;
+  border-radius: 5px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+}
+
+button[type=submit]:hover,
+button[type=submit]:focus{
+    background-image: url("emailicon.jpg");
+    color: inherit;
+    background-repeat: no-repeat;
+    text-align: right;
+    background-color: gold;
+    border-radius: 50% 90% 90% 50%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel and reset button */
+button[type=reset]{
+  float: left;
+  border: none;
+  color: red;
+}
+
+button[type=button]{
+  float: left;
+  border: none;
+  bottom: 50%;
+
+}
+
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+/*top image: PC logo*/
+img.pcb {
+  width: 40%;
+  border-radius: 50%;
+}
+
+/*Form title whatsApp*/
+h2{
+    text-align: center;
+    text-transform: uppercase;
+    color: gold;
+}
+
+
+.container {
+  padding: 1px 16px 0 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: green; /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid gold;
+  border-radius: 10px;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+  .close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: gold;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.9s;
+  animation: animatezoom 0.9s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}

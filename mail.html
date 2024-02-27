@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="mail.css">
+    <title>Send you mail</title>
+  </head>
+ <body>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="send">Send Email</button>
+<br>
+<a href="Index.html">send later</a>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="sendEmailtolec.php" method="post">
+ <fieldset>
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="pcb.jpg" alt="pcb" class="pcb">
+    </div>
+
+    <h2>STUDENT fORM</h2>
+
+    <div class="container">
+      <label for="phone#">Phone Number</label>
+      <input type="text" placeholder="07*******/01********" name="phone#" required>
+
+      <label for="email">Email</label>
+      <input type="email" placeholder="abcd123@gmai.com" name="email" required>
+        
+      <legend>
+      <label for="gender">Gender:</label>
+      Male <input type="radio" name="gender" value="M" required> 
+      Female <input type="radio" name="gender" value="F" required>
+      </legend><br>
+
+      <legend>
+         <label for="Year">Year of Study:</label>
+         <select name="year">
+        <option value="year of study"></option>
+        <option value="1">Year ONE</option>
+        <option value="2">Year TWO</option>
+        <option value="3">Year THREE</option>
+        <option value="4">Year FOUR</option>
+      </select>
+      </legend>
+     
+      <br>
+
+      <legend>
+        <label for="school">School of:</label>
+        <select name="school of" id="school" required>
+          <option></option>
+          <option value="1">Arts</option>
+          <option value="2">Busines</option>
+          <option value="3">Education</option>
+          <option value="4">Science</option>
+        </select> 
+      </legend>
+      <br>
+
+        <label for="program">Program:</label>
+      <input type="text" name="program" placeholder="specify" required>
+      <br><br>
+
+     <legend>
+      <label for="contacts2">Reach you Via:</label>
+      <select name="year" id="message1" required>
+        <option></option>
+        <option value="1">Email Above</option>
+        <option value="2">Phone Call (Above)</option>
+        <option value="3">Physical Dialogue</option>
+        <option value="4">WhatsApp</option>
+      </select>
+     </legend>
+        <br>
+
+        <legend>
+          <label for="counsellor">Which Counsellor</label>
+          <select name="counsellor" id="message" required>
+            <option></option>
+            <option value="1">DR. MERCY NJUE</option>
+            <option value="2">DR.  ABCDT</option>
+            <option value="3">DR. ADFGHNLGJK</option>
+            <option value="4">DR. 5247T58</option>
+          </select>
+         </legend>
+         <br>
+
+        <label for="problem">State the Problem:</label>
+        <textarea name="problem" cols="40"></textarea>
+     
+        <button type="submit">Send</button>
+     
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'">Cancel</button>
+      <br>
+      <button type="reset" class="resetbtn">Rewrite</button>
+    </div>
+   </fieldset>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+ // When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+/*	contact form
+	------------------------------------------------------ */
+
+	/* local validation */
+	$('#contactForm').validate({
+
+/* submit via ajax */
+submitHandler: function(form) {
+
+  var sLoader = $('#submit-loader');
+
+  $.ajax({      	
+
+      type: "POST",
+      url: "php/sendEmail.php",
+      data: $(form).serialize(),
+      beforeSend: function() { 
+
+        sLoader.fadeIn(); 
+
+      },
+      success: function(msg) {
+
+          // Message was sent
+          if (msg == 'OK') {
+            sLoader.fadeOut(); 
+             $('#message-warning').hide();
+             $('#contactForm').fadeOut();
+             $('#message-success').fadeIn();   
+          }
+          // There was an error
+          else {
+            sLoader.fadeOut(); 
+             $('#message-warning').html(msg);
+            $('#message-warning').fadeIn();
+          }
+
+      },
+      error: function() {
+
+        sLoader.fadeOut(); 
+        $('#message-warning').html("Something went wrong. Please try again.");
+         $('#message-warning').fadeIn();
+
+      }
+
+    });     		
+  }
+
+});
+
+</script>
+
+</body>
+</html>
